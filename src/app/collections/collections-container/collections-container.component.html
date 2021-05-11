@@ -1,2 +1,8 @@
 <app-divider>Table Component</app-divider>
 <app-table classNames="striped celled" [tableData]="tableData" [headers]="headers"></app-table>
+<app-divider>Tabs Menu</app-divider>
+<app-tabs>
+  <a [routerLink]="['./']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="item">Biography</a>
+  <a [routerLink]="['./', 'albums']" routerLinkActive="active" class="item">Albums</a>
+  <a [routerLink]="['./', 'associated-acts']" routerLinkActive="active" class="item">Associated Acts</a>
+</app-tabs>
