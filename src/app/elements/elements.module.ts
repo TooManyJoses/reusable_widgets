@@ -5,17 +5,21 @@ import { ElementsRoutingModule } from './elements-routing.module';
 import { ElementsContainerComponent } from './elements-container/elements-container.component';
 import { PlaceholderComponent } from './placeholder/placeholder.component';
 import { TimesDirective } from './times.directive';
+import { SharedModule } from '../shared/shared.module';
+import { SegmentComponent } from './segment/segment.component';
 
 
 @NgModule({
   declarations: [
     ElementsContainerComponent,
     PlaceholderComponent,
-    TimesDirective
+    TimesDirective,
+    SegmentComponent
   ],
   imports: [
     CommonModule,
-    ElementsRoutingModule
+    ElementsRoutingModule,
+    SharedModule,
   ],
 })
 export class ElementsModule { }
