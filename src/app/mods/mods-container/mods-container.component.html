@@ -1,3 +1,9 @@
 <app-divider>Modal Component</app-divider>
 <button class="ui button" (click)="onToggleModal()">Show Modal</button>
-<app-modal (close)="onToggleModal()" *ngIf="showModal"></app-modal>
+<app-modal (close)="onToggleModal()" *ngIf="showModal">
+  <div modalTitle>Reusable Title</div>
+  <p>Main content area of modal window. Text passed as children wit no selector</p>
+  <ng-container modalFooter>
+    <button (close)="onToggleModal()" class="ui button">Close</button>
+  </ng-container>
+</app-modal>
